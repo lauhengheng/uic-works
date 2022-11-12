@@ -1,0 +1,126 @@
+<div class="container">
+
+<!-- 头像昵称区域 -->
+    <div class="top-box">
+        <div class="avatar">
+            <image src="{{ userinfo.userimage }}"></image>
+        </div>
+        <text class="nickname">{{ userinfo.nickname }}</text>
+    </div>
+
+
+<!-- 面板的列表区域 -->
+    <div class="panel-list">
+
+    <!-- 第一个面板 -->
+        <div class="panel">
+
+        <!-- panel 的主体区域 -->
+            <div class="panel-body">
+
+            <!-- panel 的 item 项 -->
+                <div class="panel-item">
+                    <text>8</text>
+                    <text style="margin-top : 5px;">收藏的店铺</text>
+                </div>
+                <div class="panel-item">
+                    <text>14</text>
+                    <text style="margin-top : 5px;">收藏的商品</text>
+                </div>
+                <div class="panel-item">
+                    <text>18</text>
+                    <text style="margin-top : 5px;">关注的商品</text>
+                </div>
+                <div class="panel-item">
+                    <text>84</text>
+                    <text style="margin-top : 5px;">足迹</text>
+                </div>
+            </div>
+        </div>
+
+    <!-- 第二个面板 -->
+        <div class="panel">
+
+        <!-- 面板的标题 -->
+            <div class="panel-title">
+                <text>我的订单</text>
+                <image src="/common/icon/ge.png" style="width : 20px; height : 20px;"></image>
+            </div>
+
+        <!-- 面板的主体 -->
+            <div class="panel-body">
+
+            <!-- 面板主体中的 item 项 -->
+                <div class="panel-item">
+                    <image src="/common/icon/待付款.png" class="icon"></image>
+                    <text style="margin-top : 5px;">待付款</text>
+                </div>
+                <div class="panel-item">
+                    <image src="/common/icon/待收货.png" class="icon"></image>
+                    <text style="margin-top : 5px;">待收货</text>
+                </div>
+                <div class="panel-item">
+                    <image src="/common/icon/退款.png" class="icon"></image>
+                    <text style="margin-top : 5px;">退款/退货</text>
+                </div>
+                <div class="panel-item">
+                    <image src="/common/icon/订单.png" class="icon"></image>
+                    <text style="margin-top : 5px;">全部订单</text>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--listGroupt区域-->
+    <list class="listG">
+        <list-item-group class="list-item-group">
+            <list-item>
+                <text class="group">收货地址</text>
+            </list-item>
+            <list-item>
+                <text class="groupValue">广东省广州市番禺区广州番禺职业技术学院</text>
+            </list-item>
+            <list-item>
+                <text class="groupValue">广东省广州市番禺区沙湾镇市良路1342号</text>
+            </list-item>
+            <list-item>
+                <text class="groupValue">文本内容</text>
+            </list-item>
+        </list-item-group>
+        <list-item-group>
+            <list-item>
+                <text class="group">联系客服</text>
+            </list-item>
+            <list-item>
+                <text class="groupValue">文本内容</text>
+            </list-item>
+            <list-item>
+                <text class="groupValue">文本内容</text>
+            </list-item>
+            <list-item>
+                <text class="groupValue">文本内容</text>
+            </list-item>
+        </list-item-group>
+        <list-item-group>
+            <list-item>
+                <text class="group">我的钱包</text>
+            </list-item>
+            <list-item>
+                <text class="groupValue">文本内容</text>
+            </list-item>
+            <list-item>
+                <text class="groupValue">文本内容</text>
+            </list-item>
+            <list-item>
+                <text class="groupValue">文本内容</text>
+            </list-item>
+        </list-item-group>
+        <list-item-group>
+            <list-item>
+                <text class="group">退出登录</text>
+            </list-item>
+        </list-item-group>
+    </list>
+
+
+</div>

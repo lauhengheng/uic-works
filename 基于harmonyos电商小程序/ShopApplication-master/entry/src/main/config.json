@@ -1,0 +1,110 @@
+{
+  "app": {
+    "vendor": "example",
+    "bundleName": "com.shop.myapplication",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {
+    "default": {
+      "network": {
+        "cleartextTraffic": true
+      }
+    }
+  },
+  "module": {
+    "mainAbility": "com.shop.myapplication.MainAbility",
+    "deviceType": [
+      "phone"
+    ],
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "metaData": {
+          "customizeData": [
+            {
+              "extra": "",
+              "name": "hwc-theme",
+              "value": "androidhwext:style/Theme.Emui.Light.NoTitleBar"
+            }
+          ]
+        },
+        "visible": true,
+        "name": "com.shop.myapplication.MainAbility",
+        "icon": "$media:icon",
+        "configChanges": [
+          "orientation"
+        ],
+        "description": "$string:mainability_description",
+        "label": "$string:entry_MainAbility",
+        "type": "page",
+        "launchType": "standard"
+      }
+    ],
+    "distro": {
+      "moduleType": "entry",
+      "installationFree": false,
+      "deliveryWithInstall": true,
+      "moduleName": "entry"
+    },
+    "package": "com.shop.myapplication",
+    "name": ".MyApplication",
+    "js": [
+      {
+        "pages": [
+          "pages/index/index",
+          "pages/home/home",
+          "pages/cate/cate",
+          "pages/shopcart/shopcart",
+          "pages/my/my",
+          "pages/goods_search/goods_search",
+          "pages/goods_list/goods_list",
+          "pages/goods_detail/goods_detail",
+          "pages/login/login",
+          "pages/live/live"
+        ],
+        "name": "default",
+        "window": {
+          "designWidth": 720,
+          "autoDesignWidth": true
+        }
+      },
+      {
+        "pages": [
+          "pages/bottomtab/bottomtab",
+          "pages/mysearch/mysearch",
+          "pages/header/header",
+          "pages/loadermore/loadermore",
+          "pages/vslider/vslider",
+          "pages/loaderialog/loaderialog",
+          "pages/liveright/liveright",
+          "pages/my_login/my_login",
+          "pages/comment/comment",
+          "pages/my_userinfo/my_userinfo",
+          "pages/liveleft/liveleft"
+        ],
+        "name": "components",
+        "window": {
+          "designWidth": 720,
+          "autoDesignWidth": false
+        }
+      }
+    ],
+    "reqPermissions": [
+      {
+        "name": "ohos.permission.INTERNET"
+      }
+    ]
+  }
+}

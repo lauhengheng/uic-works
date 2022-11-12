@@ -1,0 +1,8 @@
+<!--头部组件-->
+<div class="container" style="background-color : {{ bgcolor }};">
+    <image src="/common/icon/le.png" @click="goback" if="{{ iconisshow == true }}"></image>
+    <div else></div>
+    <text style="color : {{ color }};">{{ title }}</text>
+    <image src="/common/icon/search.png" @click="goToSearch" if="{{ iconisshow == true }}"></image>
+    <div else></div>
+</div>

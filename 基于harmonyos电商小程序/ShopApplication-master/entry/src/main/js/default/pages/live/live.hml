@@ -1,0 +1,35 @@
+<element src="../../../components/pages/liveright/liveright.hml" name="liveright"></element>
+<element src="../../../components/pages/liveleft/liveleft.hml" name="liveleft"></element>
+<element src="../../../components/pages/header/header.hml" name="header"></element>
+<element src="../../../components/pages/comment/comment.hml" name="comment"></element>
+<div class="container">
+    <header title="逛逛" bgcolor="white" color="red" iconisshow="false">
+    <!--头部-->
+    </header>
+
+    <swiper class="swiper" id="swiper" index="1" indicator="false" loop="false"
+            digital="false" @change="swiperChange" cachedCount="2"
+            vertical="true">
+
+    <!--上下滑动切换视频swiper-->
+        <div for="{{ (index, item) in videolist }}" tid="item.id">
+            <video src='{{ item.src }}' muted='true' autoplay='true'
+                   controls='false'
+                   style="object-fit : fill; width : 100%; height : 100%;"
+                   loop="true"
+                   onclick="change_start_pause">
+            </video>
+
+            <liveleft class="leftbox" video="{{ item }}">
+            <!--左侧信息栏-->
+            </liveleft>
+
+            <div class="musicbgc"></div>
+
+            <liveright class="rightbox">
+            <!--右侧操作栏-->
+            </liveright>
+
+        </div>
+    </swiper>
+</div>

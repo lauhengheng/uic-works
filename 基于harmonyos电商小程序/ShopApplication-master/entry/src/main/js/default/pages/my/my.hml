@@ -1,0 +1,6 @@
+<element src="../../../components/pages/my_login/my_login.hml" name="my-login"></element>
+<element src="../../../components/pages/my_userinfo/my_userinfo.hml" name="my-userinfo"></element>
+<div class="container">
+    <my-login if="{{userInfo.username == null}}"></my-login>
+    <my-userinfo userinfo="{{userInfo}}" else></my-userinfo>
+</div>

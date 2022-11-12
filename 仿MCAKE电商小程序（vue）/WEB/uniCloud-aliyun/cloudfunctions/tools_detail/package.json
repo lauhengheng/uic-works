@@ -1,0 +1,7 @@
+{
+  "name": "tools_detail",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

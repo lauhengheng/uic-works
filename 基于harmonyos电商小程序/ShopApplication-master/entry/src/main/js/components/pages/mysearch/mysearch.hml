@@ -1,0 +1,5 @@
+<!--搜索框组件-->
+<div class="container" id="container" @click="toSearch">
+    <image src="/common/icon/search.png" />
+    <text>{{msg}}</text>
+</div>

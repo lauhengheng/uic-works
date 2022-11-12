@@ -1,0 +1,5 @@
+<div class="container">
+    <image src="/common/icon/login.png" style="width: 100px; height: 100px;"></image>
+    <button class="btn-login" @click="goLogin">一键登录</button>
+    <text class="tips-text">登录后尽享更多内容</text>
+</div>

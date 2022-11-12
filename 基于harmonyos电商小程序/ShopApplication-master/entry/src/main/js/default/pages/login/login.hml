@@ -1,0 +1,15 @@
+<element src="../../../components/pages/vslider/vslider.hml" name="vslider"></element>
+<div class="container">
+    <form class="form" onsubmit="submit">
+        <div class="from-container">
+            <text class="title">用户登录</text>
+            <input class="input_text" type='text' placeholder="请输入手机号/邮箱账号" name="username" value="13925630303"></input>
+            <input class="input_text" type='password' placeholder="请输入密码" name="password" value="123456"></input>
+            <div class="form-tips" style="margin-top: 16px;">
+                <text>忘记密码</text>
+                <text>快速注册</text>
+            </div>
+            <input class="input_button" type='submit'>登录</input>
+        </div>
+    </form>
+</div>

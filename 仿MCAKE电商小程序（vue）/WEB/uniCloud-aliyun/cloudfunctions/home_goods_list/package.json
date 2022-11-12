@@ -1,0 +1,7 @@
+{
+  "name": "home_goods_list",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

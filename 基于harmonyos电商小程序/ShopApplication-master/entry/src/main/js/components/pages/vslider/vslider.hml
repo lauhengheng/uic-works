@@ -1,0 +1,13 @@
+<!--滑动条组件-->
+<stack class="container">
+    <text class="info">向右滑动验证</text>
+    <div style="width: 100%;display: flex;flex-direction: row;" id="slider">
+        <div style="background-color: aqua;width: {{width}}px;">
+            <text class="info" style="color: white;" if="{{vflag}}">验证成功</text>
+        </div>
+        <div on:drag="drag" on:dragend="dragend" style="background-color: #D6D6D6;height: 100%;width: 36px;display: flex;justify-content: center;align-items: center;">
+            <image src="/common/icon/ge.png" style="width: 16px;height: 16px;"></image>
+        </div>
+    </div>
+
+</stack>

@@ -1,0 +1,8 @@
+<!--底部tab切换栏组件-->
+<div class="container">
+    <div class="item" style="background-color: {{selectIndex == index ? '#d7d8d9' : ''}};"
+         for="{{(index,item) in tabs}}" tid="{{item.id}}" @click="changeTab(index)">
+        <image src="{{selectIndex == index ? item.activeImgUrl : item.imgUrl}}"/>
+        <text style="color: {{selectIndex == index ? '#d31e04' : ''}};">{{item.tabName}} </text>
+    </div>
+</div>

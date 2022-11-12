@@ -1,0 +1,21 @@
+<element src="../../../components/pages/header/header.hml" name="header"></element>
+<element src="../../../components/pages/loadermore/loadermore.hml" name="loadermore"></element>
+<div class="container">
+    <!--顶部标题-->
+    <header title="商品列表页" style="margin-bottom: 10px;"></header>
+    <!--商品列表区域-->
+    <refresh refreshing="{{fresh}}" onrefresh="refresh" type="pulldown" lasttime="true">
+        <list class="list" divider="true" scrolleffect="no" @scrollbottom="scrollbottomHandler">
+            <list-item class="list-item" for="{{(index,item) in goodsList}}" tid="item.goods_id" @click="gotoDetail(item.goods_id)">
+                <div class="left" style="background-image: {{item.goods_small_logo || defaultImg}};"></div>
+                <div class="right">
+                    <text class="title">{{item.goods_name}}</text>
+                    <div class="context">
+                        <text>￥ {{item.goods_price}}</text>
+                    </div>
+                </div>
+            </list-item>
+        </list>
+        <loadermore if="{{isShow}}"></loadermore>
+    </refresh>
+</div>

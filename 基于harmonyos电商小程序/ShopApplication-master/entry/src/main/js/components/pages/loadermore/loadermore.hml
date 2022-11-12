@@ -1,0 +1,5 @@
+<!--下拉加载更多内容时使用的加载框-->
+<div class="container">
+    <progress type="circular" style="width: 60px;height: 60px;"></progress>
+    <text style="color: red;margin-left: 8px;font-size: 15px;">数据加载中...</text>
+</div>

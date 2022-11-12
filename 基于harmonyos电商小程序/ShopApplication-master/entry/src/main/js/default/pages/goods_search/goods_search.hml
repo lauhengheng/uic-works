@@ -1,0 +1,33 @@
+<element src="../../../components/pages/header/header.hml" name="header"></element>
+<element src="../../../components/pages/mysearch/mysearch.hml" name="mysearch"></element>
+<div class="container">
+    <!--头部-->
+    <header title="搜索页面"></header>
+    <!--搜索框-->
+    <div class="search">
+        <image src="/common/icon/search.png"></image>
+        <input type="text" placeholder="请输入搜索内容" @change="changeHandler" value="{{inputValue}}"/>
+        <image if="{{kw.length != 0}}" src="/common/icon/清空文本框.png" @click="clearText"></image>
+    </div>
+    <!--搜索建议列表-->
+    <list class="list" divider="true" scrolleffect="no" if="{{searchResults.length !== 0}}">
+        <list-item class="list-item" for="{{(index,item) in searchResults}}" tid="item.id"
+                   @click="gotoDetail(item.goods_id)">
+            <text>{{item.goods_name}}</text>
+            <image src="/common/icon/ge.png"></image>
+        </list-item>
+    </list>
+
+    <!-- 搜索历史-->
+    <div class="history-box" else>
+        <!-- 标题-->
+        <div class="history-title">
+            <text>搜索历史</text>
+            <image src="/common/icon/清空.png" style="width: 20px; height: 20px;" @click="cleanHistory"></image>
+        </div>
+        <!-- 列表-->
+        <div class="history-list">
+            <text for="{{(index,item) in histories}}" tid="index" @click="gotoGoodsList(item)">{{item}}</text>
+        </div>
+    </div>
+</div>

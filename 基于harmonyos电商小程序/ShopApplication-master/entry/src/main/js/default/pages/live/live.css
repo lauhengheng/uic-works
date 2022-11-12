@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    position: relative;
+}
+
+.title {
+    font-size: 38px;
+    text-align: center;
+    width: 100%;
+    margin: 10px;
+}
+
+.rightbox{	z-index: 20;
+    position: absolute;
+    bottom: 60px;
+    right: 10px;}
+
+.comment-box {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    height: 500px;
+    width: 100%;
+}
+
+.leftbox{
+    z-index: 20;
+    position: absolute;
+    bottom: 60px;
+    left: 10px;
+    flex-direction: column;
+    width: 100%;
+}
+.musicbgc{
+    justify-content: center;
+    align-content: center;
+    z-index: 1;
+    position: absolute;
+    height: 50px;
+    background-color: #ff8888;
+    width: 95%;
+    bottom: 60px;
+    border-radius: 50px;
+    opacity:0.4;
+}

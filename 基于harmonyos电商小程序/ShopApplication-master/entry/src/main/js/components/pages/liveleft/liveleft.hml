@@ -1,0 +1,17 @@
+<!--liveleft组件-->
+<div class="liveleft">
+    <text class="author">
+       @ {{video.author}}
+    </text>
+    <text class="title">
+        {{video.title}}
+    </text>
+
+    <div class="container">
+<!--marquee组件-->
+        <marquee id="customMarquee" class="customMarquee" scrollamount="{{ scrollAmount }}" loop="{{ loop }}"
+                 direction="{{ marqueeDir }}">{{video.music}}</marquee>
+    </div>
+</div>
+
+

@@ -1,0 +1,71 @@
+<element src="../../../components/pages/mysearch/mysearch.hml" name="mysearch"></element>
+<div class="container">
+    <!--顶部搜索框-->
+    <div class="top">
+        <mysearch></mysearch>
+    </div>
+
+    <!-- 收货地址-->
+<!--    <div class="addressChooseBox">-->
+<!--        <button class="btnChooseAddress" @click="chooseAddress">-->
+<!--            请选择收货地址+-->
+<!--        </button>-->
+<!--    </div>-->
+
+    <!-- 商品列表标题区域 -->
+    <div class="cart-title">
+        <!-- 左侧图标 -->
+        <image src="/common/icon/商店.png" style="width: 25px;height: 25px; margin-right: 10px;"></image>
+        <!-- 右侧文本 -->
+        <text class="cart-title-text">购物车</text>
+    </div>
+
+    <!--购物车内容区域-->
+    <div class="cart-content" if="{{carts.length != 0}}">
+        <!--购物车商品列表区域-->
+        <list class="list" divider="true">
+            <list-item class="list-item"  for="{{(index,item) in carts}}" tid="item.goods_id">
+                <input type="checkbox" checked="{{item.goods_state}}" @click="checkboxOnChange(index, item.goods_state)" style="margin: 0;"></input>
+                <div class="left" style="background-image: {{item.goods_small_logo}};"></div>
+                <div class="right">
+                    <text class="title">{{item.goods_name}}</text>
+                    <div class="context">
+                        <text>￥ {{item.goods_price + ".00"}}</text>
+                        <div class="number-box">
+                            <button @click="sub(index)" id="addCountBtn">-</button>
+                            <input type="text" value="{{item.goods_count}}"></input>
+                            <button @click="add(index)">+</button>
+                        </div>
+                        <div class="remove-box">
+                            <image src="/common/icon/清空.png" @click="removeGoods(item.goods_id)" style="width: 15px; height: 15px;"></image>
+                        </div>
+                    </div>
+                </div>
+            </list-item>
+        </list>
+        <!--结算区域-->
+        <div class="my-settle">
+            <!-- 全选 -->
+            <div class="fullCheck" @click="changeAllState">
+                <input id="checkboxId" type="checkbox"  checked="{{ isFullCheck }}" style="margin-top: 3px;"/>
+                <label target="checkboxId"  class="radio"  style="margin-left: -3px;">全选</label>
+<!--                <image src="/common/icon/复选框_选中.png" style="width: 20px; height: 20px;margin-right: 8px;" if="{{ isFullCheck }}"></image>-->
+<!--                <image src="/common/icon/复选框_未选中.png" style="width: 20px; height: 20px;margin-right: 8px;" else></image>-->
+<!--                <text>全选</text>-->
+            </div>
+            <!-- 合计 -->
+            <div class="amount-box">
+                <text class="amount" style="font-size: 16px;">￥ 合计: {{ checkedGoodsAmount }}.00</text>
+            </div>
+            <!-- 结算按钮 -->
+            <div class="btn_settle" @click="settlement">
+                <text>结算({{checkedCount}})</text>
+            </div>
+        </div>
+    </div>
+    <!--空白购物车-->
+    <div class="empty-cart" else>
+        <image src="/common/images/kongbai.jpg" class="empty-img"></image>
+        <text class="tip-text">空空如也~_~</text>
+    </div>
+</div>

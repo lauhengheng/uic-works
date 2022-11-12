@@ -1,0 +1,39 @@
+<element src="../../../components/pages/mysearch/mysearch.hml" name="mysearch"></element>
+<div class="container">
+    <mysearch style="margin-bottom: 10px;"></mysearch>
+
+<!-- 页面滚动区域-->
+    <div class="list-container">
+
+    <!-- 左侧滑动区域-->
+        <list class="left-list">
+            <list-item class="left-list-item" style="color : {{ index === actived ? 'white' : 'black' }};
+                    background-color : {{ index === actived ? 'red' : '#f7f7f7' }};"
+                       for="{{ (index, value) in cateList }}" tid="index" on:click="activeChange(index)">
+                <text class="left-name">{{ value.cat_name }}</text>
+            </list-item>
+        </list>
+
+    <!-- 右侧滑动区域-->
+        <list class="right-list">
+            <list-item class="right-list-item" for="{{ (index, value) in cateLevel2 }}" tid="value.cate_id">
+                <text class="cate-lv2-title">/ {{ value.cat_name }} /</text>
+
+            <!-- 当前二级分类下的三级分类列表-->
+                <div class="cate-lv3-list">
+
+                <!-- 三级分类的item项-->
+                    <div class="cate-lv3-item" for="{{ (index2, item2) in value.children }}" tid="item2.cat_id"
+                         onclick="gotoGoodsList(item2.cat_id)">
+
+                    <!-- 三级分类的图片-->
+                        <image src="{{ item2.cat_icon }}"></image>
+
+                    <!-- 三级分类的文本-->
+                        <text class="cate-lv3-title">{{ item2.cat_name }}</text>
+                    </div>
+                </div>
+            </list-item>
+        </list>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+<!--请求数据时使用的加载框-->
+<dialog id="dialog" style="margin-bottom: 50%;">
+    <div class="loadstyle">
+        <progress type="circular" style="width: 50px;height: 50px;"></progress>
+        <text>请求中..</text>
+    </div>
+</dialog>

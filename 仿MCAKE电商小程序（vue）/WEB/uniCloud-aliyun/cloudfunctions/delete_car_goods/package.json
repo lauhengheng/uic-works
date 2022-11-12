@@ -1,0 +1,7 @@
+{
+  "name": "delete_car_goods",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

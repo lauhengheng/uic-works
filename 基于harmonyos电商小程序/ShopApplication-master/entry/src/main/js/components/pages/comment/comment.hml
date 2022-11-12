@@ -1,0 +1,45 @@
+<!--评论页面-->
+<div class="doc-page">
+
+    <div class="btn-div">
+        <image src="/common/liveright/comment.png" class="img"
+               onclick="showPanel"></image>
+
+    </div>
+<!--    panel组件-->
+    <panel id="simplepanel" type="foldable" mode="half" onsizechange="changeMode" miniheight="200px">
+        <div class="panel-div">
+
+            <image class="iconclose" src="/common/liveright/close.png"
+                   @click="closePanel"></image>
+            <div class="item" for="{{ (index, item) in list }}" tid="item.id">
+
+                <div>
+                    <image src="/common/liveright/author.jpg" class="img"></image>
+                </div>
+
+                <div class="commentdetail">
+                    <text class="name">
+                        <span> {{ item.name }}</span>
+                    </text>
+
+                    <text class="content">
+                        <span> {{ item.content }}</span>
+                    </text>
+
+                    <image src="/common/liveright/like-pink.png" class="like">
+                    </image>
+
+                    <text class="number">
+                        <span> {{ item.number }}</span>
+                    </text>
+
+                </div>
+
+            </div>
+            <text class="nomore">
+                <span>没有更多了</span>
+            </text>
+        </div>
+    </panel>
+</div>

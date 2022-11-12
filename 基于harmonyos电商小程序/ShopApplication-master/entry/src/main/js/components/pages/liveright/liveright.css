@@ -1,0 +1,48 @@
+.listright {
+    flex-direction: column;
+    width: 50px;
+}
+
+
+.img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+}
+
+.rightbox {
+    width: 50px;
+    height: 50px;
+    margin-top: 30px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 33px;
+}
+
+.around {
+    margin-top: 15px;
+    animation: rotate 2.5s linear 0.2s infinite;
+    height: 50px;
+    width: 50px;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.add {
+    width: 18px;
+    height: 18px;
+    border-radius: 10px;
+    background-color: red;
+    position: absolute;
+    bottom: -9px;
+    left: 16px;
+    text-align: center;
+    font-size: 10px;
+}
+

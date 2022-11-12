@@ -1,0 +1,25 @@
+<element src="../../../components/pages/bottomtab/bottomtab.hml" name="bottomntab"></element>
+<element src="../live/live.hml" name="live"></element>
+<element src="../cate/cate.hml" name="cate"></element>
+<element src="../shopcart/shopcart.hml" name="shopcart"></element>
+<element src="../my/my.hml" name="my"></element>
+<element src="../home/home.hml" name="home"></element>
+<!--入口-->
+<div class="container">
+    <swiper class="swiper" id="swiper" index="1" indicator="false" loop="false"
+            digital="false" cachedsize="-1" @change="swiperChange"
+            scrolleffect="spring">
+        <!--逛逛页面-->
+        <live></live>
+
+        <!--首页及导航栏-->
+        <div class="lh-index">
+            <bottomntab tabs="{{ tabs }}" id="bnav" show="{{ currentpage == 1 }}">
+            </bottomntab>
+            <home if="{{ this.$child('bnav').selectIndex == 0 }}"></home>
+            <cate if="{{ this.$child('bnav').selectIndex == 1 }}"></cate>
+            <shopcart if="{{ this.$child('bnav').selectIndex == 2 }}"></shopcart>
+            <my if="{{ this.$child('bnav').selectIndex == 3 }}"></my>
+        </div>
+    </swiper>
+</div>

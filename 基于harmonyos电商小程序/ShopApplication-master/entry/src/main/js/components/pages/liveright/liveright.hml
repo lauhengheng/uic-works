@@ -1,0 +1,37 @@
+<element src="../../../components/pages/comment/comment.hml" name="comment"></element>
+
+<!--逛逛页面右下角操作栏-->
+<div class="listright">
+
+    <div class="rightbox">
+
+    <!--头像及添加关注-->
+        <image src="/common/liveright/author.jpg" class="img"></image>
+        <image src="/common/liveright/add.png" class="add"
+               @click="addFollow" show="{{ addshow == true }}">
+        </image>
+    </div>
+
+    <div class="rightbox">
+
+    <!--喜欢-->
+        <image
+                src="{{ likechange == true ? '/common/liveright/like-pink.png' : '/common/liveright/like-white.png' }}"
+                class="img" @click="likeChange">
+        </image>
+    </div>
+
+    <div class="rightbox">
+    <!--评论-->
+        <comment></comment>
+    </div>
+
+    <div class="rightbox">
+
+    <!--分享-->
+        <image src="/common/liveright/share.png" class="img"></image>
+    </div>
+    <div class="around">
+        <image class="img" src="/common/liveright/2-1.png"></image>
+    </div>
+</div>

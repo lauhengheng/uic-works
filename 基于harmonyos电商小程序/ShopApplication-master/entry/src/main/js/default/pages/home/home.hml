@@ -1,0 +1,46 @@
+<element src="../../../components/pages/mysearch/mysearch.hml" name="mysearch"></element>
+<div class="container">
+    <!--头部搜索框-->
+    <mysearch></mysearch>
+
+    <!--轮播图-->
+    <swiper index="0" indicator="false" loop="true"
+            digital="false" cachedsize="-1" scrolleffect="spring">
+        <div class="item" for="{{ (index, item) in swiperList }}" tid="item.id">
+            <image src="{{ item.image_src }}" style="width : 100%; height : 100%;" @click="clickSwiperImage(item.goods_id)"></image>
+        </div>
+    </swiper>
+
+    <!--导航栏-->
+    <div class="nav-list">
+        <div class="nav-item" for="{{ (index, item) in navList }}" @click="navClickHandler(item)">
+            <image src="{{ item.image_src }}" style="width : 64px; height : 70px;" @click="gotoCate(index)"></image>
+        </div>
+    </div>
+
+    <!-- 楼层区域-->
+    <div class="floor-list">
+        <div class="floor-item" for="{{ (index, item) in floorList }}" tid="item.id">
+            <!-- 楼层标题-->
+            <div class="floor-title">
+                <image src="{{ item.floor_title.image_src }}" style="width: 100%; height: 100%;"></image>
+            </div>
+            <!-- 楼层图片-->
+            <div class="floor-img-box">
+                <!-- 左侧大图片-->
+                <image src="{{ item.product_list[0].image_src }}" class="left-img-box" @click="gotoGoodsList(item.product_list[0].navigator_url)"></image>
+                <!-- 右侧小图片-->
+                <div class="right-img-box">
+                    <block for="{{ (index2, item2) in item.product_list }}" tid="index2">
+                        <image src="{{ item2.image_src }}" if="{{index2 != 0}}" @click="gotoGoodsList(item2.navigator_url)"
+                                style="margin-right: {{(index2 ==1 || index2==3) ? '5px' : '0px'}};
+                                        margin-bottom: {{(index2 ==1 || index2==2) ? '10px' : '0px'}};">
+                        </image>
+                    </block>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
